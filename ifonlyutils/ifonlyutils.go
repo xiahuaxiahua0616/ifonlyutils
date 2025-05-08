@@ -36,7 +36,7 @@ func GroupBySuit(cards []byte) [][]byte {
 }
 
 // GetStraightOnyByOne 一个接一个的获取
-func GetStraightOnyByOne(cards []byte) (straight []byte, overCards []byte) {
+func GetStraightOnyByOne(cards []byte) (straight []byte, leftover []byte) {
 	tempBytes := []byte{}
 	for {
 		if len(cards) <= 0 {
