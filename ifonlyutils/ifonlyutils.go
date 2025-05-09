@@ -132,3 +132,20 @@ func Conv14to1(cards []byte) []byte {
 
 	return result
 }
+
+func CalcScore(cards []byte, joker byte) int {
+	var score int
+	for _, card := range cards {
+		value := card & 0x0F
+		if value == joker {
+			continue
+		}
+
+		if value >= 10 || value == 1 {
+			score += 10
+		} else {
+			score += int(value)
+		}
+	}
+	return score
+}
