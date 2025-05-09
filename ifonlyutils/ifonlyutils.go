@@ -1,6 +1,9 @@
 package ifonlyutils
 
-import "fmt"
+import (
+	"fmt"
+	"slices"
+)
 
 // GroupBySuit 通过花色进行分组
 func GroupBySuit(cards []byte) [][]byte {
@@ -82,4 +85,50 @@ func UniqueAndDuplicates(input []byte) (unique, duplicates []byte) {
 		}
 	}
 	return
+}
+
+func conv1to14(cards []byte) []byte {
+	var result []byte
+
+	for _, c := range cards {
+		switch c {
+		case 0x01:
+			result = append(result, 0x0e)
+		case 0x11:
+			result = append(result, 0x1e)
+		case 0x21:
+			result = append(result, 0x2e)
+		case 0x31:
+			result = append(result, 0x3e)
+		default:
+			result = append(result, c)
+		}
+	}
+
+	slices.Sort(result)
+
+	return result
+}
+
+func conv14to1(cards []byte) []byte {
+	var result []byte
+
+	for _, c := range cards {
+		switch c {
+		case 0x0e:
+			result = append(result, 0x01)
+		case 0x1e:
+			result = append(result, 0x11)
+		case 0x2e:
+			result = append(result, 0x21)
+		case 0x3e:
+			result = append(result, 0x31)
+		default:
+			result = append(result, c)
+		}
+	}
+
+	slices.Sort(result)
+
+	return result
 }
