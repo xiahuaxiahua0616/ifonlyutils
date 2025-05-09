@@ -87,7 +87,7 @@ func UniqueAndDuplicates(input []byte) (unique, duplicates []byte) {
 	return
 }
 
-func conv1to14(cards []byte) []byte {
+func Conv1to14(cards []byte) []byte {
 	var result []byte
 
 	for _, c := range cards {
@@ -110,7 +110,7 @@ func conv1to14(cards []byte) []byte {
 	return result
 }
 
-func conv14to1(cards []byte) []byte {
+func Conv14to1(cards []byte) []byte {
 	var result []byte
 
 	for _, c := range cards {

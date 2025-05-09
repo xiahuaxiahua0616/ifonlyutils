@@ -40,7 +40,7 @@ func TestConv1to14(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			result := conv1to14(tt.cards)
+			result := Conv1to14(tt.cards)
 			if !reflect.DeepEqual(result, tt.wantStraight) {
 				t.Errorf("expected %v, got %v", tt.wantStraight, result)
 			}
@@ -83,7 +83,7 @@ func TestConv14to1(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			result := conv14to1(tt.cards)
+			result := Conv14to1(tt.cards)
 			if !reflect.DeepEqual(result, tt.wantStraight) {
 				t.Errorf("expected %v, got %v", tt.wantStraight, result)
 			}

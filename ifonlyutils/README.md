@@ -37,10 +37,10 @@
 ### 🔹 `UniqueAndDuplicates(cards []byte) (unique []byte, duplicates []byte)`
 对牌进行去重，返回唯一牌 `unique` 和重复牌 `duplicates`。
 
-### 🔹 `conv1to14(cards []byte) []byte `
+### 🔹 `Conv1to14(cards []byte) []byte `
 对牌中的值把1转换成14
 
-### 🔹 `conv14to1(cards []byte) []byte `
+### 🔹 `Conv14to1(cards []byte) []byte `
 对牌中的值把14转换成1
 
 ## 闲谈
