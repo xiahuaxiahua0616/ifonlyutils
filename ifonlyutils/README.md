@@ -37,6 +37,12 @@
 ### 🔹 `UniqueAndDuplicates(cards []byte) (unique []byte, duplicates []byte)`
 对牌进行去重，返回唯一牌 `unique` 和重复牌 `duplicates`。
 
+### 🔹 `conv1to14(cards []byte) []byte `
+对牌中的值把1转换成14
+
+### 🔹 `conv14to1(cards []byte) []byte `
+对牌中的值把14转换成1
+
 ## 闲谈
 关于ifonly命名的由来。最近偏爱冯唐，``春水初生，春林初盛，春风十里不如你``就是他的作品。也许是读了诗，也可能看了点小说，染上了点文绉绉的气息，本身也是热爱装逼的人，不装逼，毋宁死啊！在开辟项目时，想到Go社区里有很多名字都和项目并不相关，比方说Web框架Gin、Beego，微服务框架go-zero。既然可以随意命名，那我想他能文艺点，也想整个项目都``文艺``点。
 
